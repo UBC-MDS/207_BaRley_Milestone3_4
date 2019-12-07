@@ -1,35 +1,11 @@
-## Milestone 1: Projet set-up and dashboard proposal
-
-In this milestone, you will set-up your project for development and submit a dashboard proposal. In the second milestone, you will submit the final version of your first dashboard created in python and Altair.
+## Milestone 3: Projet set-up and dashboard proposal
 
 ## Proposal
-
-Your proposal should be no more than 1,000 words.
-
-When submitting your proposal as a (separate) markdown document (named `proposal.md` which lives on GitHub.com), please include the following sections in this order:
-
-1. Motivation and purpose
-2. Description of the data
-3. Research questions you are exploring
-
-The proposal will be marked as whole, and you will be assessed on the quality and clarity of your writing, the feasability of what you propose using the writing and reasoning rubrics.
-
-Each of the proposal sections are described below and include an example of what is expected. You don't have to write your own proposal _exactly_ the same as the examples; the examples just serve as a guide. When writing your proposal consider whether what you are proposing is realistic to implement in a two week time frame.
-
 ### Section 1: Motivation and Purpose
-
-In a few sentences, provide some motivation for why you are creating a dashboard. What problem is could it solve? What is the "purpose" of the dashboard? Be brief and clear.
-
 
 > Barley is part of the major cereal grains used worldwide. Understanding how the annual yield of barley is impacted by the variety or site on which it grows is very important. It can help farmers to have the highest yield as possible and increase their productivity, but it can also help agronomists to have a better understanding of how the environment impacts each variety of barley. To help those farmers increase their productivity, we decided to create an app that could allow them to explore a dataset containing information on annual yields for different sites and barley varieties. This app will allow the users to see the annual yield for selected varieties and particular sites, for the years 1931, 1932, or both. It should help them understand what variety or what site is the most suitable to their situation.
 
 ### Section 2: Description of the data
-
-As mentioned in lecture, in your group of 3 or 4, you are expected to select one of your group members DSCI 531 Lab 4 assignments as a template for your dashboard. 
-This is to make sure we do not spend a lot of time looking for a new dataset and understanding it in detail.
-
-
-In your proposal, briefly describe the dataset and the variables that you will visualize. Note, all data has to be publicly available since you are required to create a public repo.
 
 > We chose the barley dataset from the vega-datasets python package. This dataset shows the yields of 10 different varieties of barley at 6 different sites in Minnesota during the years 1931 and 1932. It first appeared in the 1934 paper  "Statistical Determination of Barley Varietal Adaption" by the three agronomists who led this experiment: F.R. Immer, H.K. Hayes, and L. Powers.
 
@@ -44,17 +20,7 @@ In your proposal, briefly describe the dataset and the variables that you will v
 > We speculate here that the yield is in kilograms per hectare.
 
 
-
 ### Section 3: Research questions and usage scenarios
-
-The purpose of this section is to get you to think about how someone else might use the app you're going to design, and to think about those needs before you start coding. 
-In Block 2, you learned about several versions of research questions - we will again focus on descriptive and exploratory research questions. 
-Revise your research question(s) based on the feedback of your peers, and state them in this section.
-Then, consider how the dashboard can be used to answer your research question(s) by a fictional person - these are usage scenarios.
-
-Usage scenarios are typically written in a narrative style and include the specific context of usage, tasks associated with that usage context, and a hypothetical walkthrough of how the user would accomplish those tasks with your app. 
-If you are using a Kaggle dataset, you may use their "Overview (inspiration)" to create your usage scenario, or you may come up with your own inspiration.
-
 
 > Our research questions are : <br>
 Given some sites and some varieties, what variety of barley had the highest yield during a specific year? <br>
