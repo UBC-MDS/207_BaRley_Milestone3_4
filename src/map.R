@@ -26,4 +26,4 @@
     labs(title = "Barley Sites in Minnesota, USA") +
     geom_point(data = layer_points_t, aes(x = lon.1, y = lat.1), color = "red") +
     geom_text(data = layer_points_t, aes(x = lon.1, y = lat.1, label = location), hjust = -0.2, vjust = 0)
-  
+          
