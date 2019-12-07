@@ -1,4 +1,4 @@
-## Milestone 3: Projet set-up and dashboard proposal
+## Milestone 3: Project set-up and dashboard proposal
 
 ## Proposal
 ### Section 1: Motivation and Purpose
