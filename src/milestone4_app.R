@@ -57,6 +57,11 @@ make_graph_variety <- function(years = c(1931, 1932),
                        varieties = all_varieties){
   
   #filter our data based on the year/continent selections
+  
+  print(years)
+  print(sites)
+  print(varieties)
+  
   data <- df %>%
     filter(year >= years[1] & year <= years[length(years)]) %>%
     filter(site %in% sites) %>% 
@@ -209,14 +214,14 @@ app$layout(
       htmlLabel('Select a variety:'),
       varietyDropdown,
       #graph and table
-      map_graph,
-      htmlIframe(height=20, width=10, style=list(borderWidth = 3)), #space
+      map_graph, htmlIframe(height=20, width=10, style=list(borderWidth = 3)), #space
       variety_graph, 
       htmlIframe(height=20, width=10, style=list(borderWidth = 2)), #space
       site_graph,
       htmlIframe(height=20, width=10, style=list(borderWidth = 2)), #space
       heat_map_graph,
       htmlIframe(height=20, width=10, style=list(borderWidth = 3)), #space
+      dccMarkdown("[Data Source](https://cran.r-project.org/web/packages/gapminder/README.html)")
     )
   )
 )
