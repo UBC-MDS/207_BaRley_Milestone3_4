@@ -33,7 +33,7 @@ siteDropdown <- dccDropdown(
     unique(df$site), function(x){
       list(label=x, value=x)
     }),
-  value = levels(df$site), #Selects all by default
+  value = levels(as.factor(df$site)), #Selects all by default
   multi = TRUE
 )
 
@@ -45,7 +45,7 @@ varietyDropdown <- dccDropdown(
     unique(df$variety), function(x){
       list(label=x, value=x)
     }),
-  value = levels(df$variety), #Selects all by default
+  value = levels(as.factor(df$variety)), #Selects all by default
   multi = TRUE
 )
 
@@ -57,10 +57,7 @@ make_graph_variety <- function(years = c(1931, 1932),
                        varieties = all_varieties){
   
   #filter our data based on the year/continent selections
-  
-  print(years)
-  print(sites)
-  print(varieties)
+
   
   data <- df %>%
     filter(year >= years[1] & year <= years[length(years)]) %>%
@@ -126,8 +123,8 @@ make_graph_site <- function(years = c(1931, 1932),
 
 
 make_heat_map <- function(years = c(1931, 1932), 
-                            sites = all_sites,
-                            varieties = all_varieties){
+                          sites = all_sites,
+                          varieties = all_varieties){
   
   #filter our data based on the year/continent selections
   data <- df %>%
@@ -202,13 +199,25 @@ map_graph <- dccGraph(
 
 app$layout(
   htmlDiv(
+    className = "test",
     list(
-      htmlH1('My app'),
-      htmlH2('Looking at yield data interactively'),
+      htmlH1('BaRley app'),
+      htmlH2('Have some information about the barley yield in an interactive way!'),
+      htmlP('Barley is part of the major cereal grains used worldwide. Understanding how the annual yield of barley is impacted by the variety or site on which it grows is very important. This dashboard has been created to allow you to explore a dataset containing the annual yield for selected varieties of barley and particular sites, for the years 1931, 1932, or both. It should help you better understand what variety or what site is the most suitable to your situation. If you are wondering:'),
+      htmlP('-Given some sites and some varieties, what variety of barley had the highest yield during a specific year?'),
+      htmlP('-Given some sites and some varieties, what site had the highest yield during a specific year?'),
+      htmlP('-Given some sites and some varieties, what is the variety of barley with the highest yield for each of the sites?'),
+      htmlP('then this app is exactly what you need! Now, you have no excuse to increase your productivity and have the highest yield as possible! '),
+      htmlP('Trick : Place your mouse above the different bars to display more information!'),
+      dccMarkdown('*More information about the dataset : *'),
+      dccMarkdown('*We chose the barley dataset from the vega-datasets python package. This dataset shows the yields of 10 different varieties of barley at 6 different sites in Minnesota during the years 1931 and 1932. It first appeared in the 1934 paper "Statistical Determination of Barley Varietal Adaption" by the three agronomists who led this experiment: F.R. Immer, H.K. Hayes, and L. Powers.*'),
+      dccMarkdown('*The 10 varieties studied are : Velvet, Trebi, No. 457, No. 462, Peatland, No. 475, Manchuria, Glabron, Svansota, and Wisconsin No 38.*'),
+      dccMarkdown('*The 6 sites studied are : University Farm, Waseca, Morris, Crookston, Grand Rapids, and Duluth.*'),
+      htmlBr(),
       #selection components
       htmlLabel('Select a year range:'),
       yearSlider,
-      htmlIframe(height=10, width=10, style=list(borderWidth = 2)), #space
+      htmlBr(),
       htmlLabel('Select a site:'),
       siteDropdown,
       htmlLabel('Select a variety:'),
@@ -220,8 +229,7 @@ app$layout(
       site_graph,
       htmlIframe(height=20, width=10, style=list(borderWidth = 2)), #space
       heat_map_graph,
-      htmlIframe(height=20, width=10, style=list(borderWidth = 3)), #space
-      dccMarkdown("[Data Source](https://cran.r-project.org/web/packages/gapminder/README.html)")
+      htmlIframe(height=20, width=10, style=list(borderWidth = 3)) #space
     )
   )
 )
