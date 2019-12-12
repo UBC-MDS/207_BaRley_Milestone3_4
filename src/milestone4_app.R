@@ -220,14 +220,11 @@ app$layout(
       htmlLabel('Select a variety:'),
       varietyDropdown,
       #graph and table
-      map_graph, htmlIframe(height=20, width=10, style=list(borderWidth = 3)), #space
+      map_graph,
       variety_graph, 
-      htmlIframe(height=20, width=10, style=list(borderWidth = 2)), #space
       site_graph,
-      htmlIframe(height=20, width=10, style=list(borderWidth = 2)), #space
       heat_map_graph,
-      htmlIframe(height=20, width=10, style=list(borderWidth = 3)) #space
-    )
+     )
   )
 )
 
