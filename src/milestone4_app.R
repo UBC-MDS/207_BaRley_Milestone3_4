@@ -134,6 +134,14 @@ make_heat_map <- function(years = c(1931, 1932),
     group_by(variety, site) %>% 
     summarise(yield = sum(yield))
   
+
+  
+  my_df_agg <- data %>%
+    summarise(yield = max(yield))
+  
+  my_max <- merge(my_df_agg, data)
+  
+
   p <- ggplot(data, aes(variety, site, fill= yield, text = paste('site: ', site,
                                                                  '</br></br></br> Variety:', variety,
                                                                  '</br></br></br> Yield:', yield))) + 
@@ -143,6 +151,21 @@ make_heat_map <- function(years = c(1931, 1932),
     ylab("Site") +
     ggtitle("Heatmap showing the yield per variety and per site")
   
+ #  val <- 1
+ # my_varieties <- list()
+#  for (variety in unique(df$variety)){
+#    my_varieties[[variety]] <- val
+#    val <- val+1 
+#  }
+  
+#  i<- 0
+  
+#  for (site in my_max['site']){
+#    i <- i+1
+#    max_var <- filter(my_max, site == site)$variety
+#    print(c(max_var))
+#    p <- p + geom_point(aes(x = c(max_var), y = c(i)), color = 'red', size = 5)
+#  }
   
   # passing c("text") into tooltip only shows the contents of 
   ggplotly(p, tooltip = c("text"))
