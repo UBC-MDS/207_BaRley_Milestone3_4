@@ -166,9 +166,9 @@ make_map <- function(sites = all_sites){
   p <- plot_usmap(include = "MN", "counties", color = "blue", size = 0.2) +
     labs(title = "Barley Sites in Minnesota, USA") +
     geom_point(data = layer_points_t, aes(x = lon.1, y = lat.1), color = "red") +
-    geom_text(data = layer_points_t, aes(x = lon.1 + 1000, y = lat.1 + 1000, label = site), hjust = -3, vjust = 15)
+    geom_text(data = layer_points_t, aes(x = lon.1, y = lat.1, label = site), hjust = -3, vjust = 15)
   
-  
+    
   # displays meaningless latitude and longitude. But at least it shows something other than type=0,
   ggplotly(p, layer = 2)
 }
