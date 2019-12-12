@@ -42,18 +42,18 @@ map_graph <- dccGraph(
 
 content <- htmlDiv(
     list(
-        htmlH5("Have some information about the barley yield in an interactive way!", class="card-header"),
+        htmlH5("Have some information about barley yields in an interactive way!", class="card-header"),
         htmlDiv(
             list(
                 htmlH5("Description", class="card-title"),
                 htmlDiv(
                     list(
                         htmlP("Barley is part of the major cereal grains used worldwide. Understanding how the annual yield of barley is impacted by the variety or site on which it grows is very important. This dashboard has been created to allow you to explore a dataset containing the annual yield for selected varieties of barley and particular sites, for the years 1931, 1932, or both. It should help you better understand what variety or what site is the most suitable to your situation. If you are wondering:"),
-                        htmlP('-Given some sites and some varieties, what variety of barley had the highest yield during a specific year?'),
-                        htmlP('-Given some sites and some varieties, what site had the highest yield during a specific year?'),
-                        htmlP('-Given some sites and some varieties, what is the variety of barley with the highest yield for each of the sites?'),
+                        dccMarkdown('- Given some sites and some varieties, what variety of barley had the highest yield during a specific year?'),
+                        dccMarkdown('- Given some sites and some varieties, what site had the highest yield during a specific year?'),
+                        dccMarkdown('- Given some sites and some varieties, what is the variety of barley with the highest yield for each of the sites?'),
                         htmlP('Then this app is exactly what you need! Now, you have no excuse to increase your productivity and have the highest yield as possible! '),
-                        htmlP('Trick : Place your mouse above the different bars to display more information!')
+                        dccMarkdown('__Trick: Place your mouse above the different bars to display more information!__')
                     ),
                     class="card-text"
                 )
