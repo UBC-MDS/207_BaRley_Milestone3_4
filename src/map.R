@@ -1,7 +1,6 @@
   library(ggplot2)
-  library(albersusa)
+  library(usmap)
   library(tidyverse)
-  library(lattice)
   
   # Read in the data from the repository
   
