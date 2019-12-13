@@ -121,7 +121,7 @@ make_map <- function(sites = all_sites){
   p <- plot_usmap(include = "MN", "counties", color = "blue", size = 0.2) +
     labs(title = "Barley Sites in Minnesota, USA") +
     geom_point(data = layer_points_t, aes(x = lon.1, y = lat.1), color = "red") +
-    geom_text(data = layer_text_t, aes(x = lon.1, y = lat.1, label = site))
+    geom_text(data = layer_text_t, aes(x = lon.1, y = lat.1, label = site), hjust = -0.2, vjust = 0)
   
     
   # displays meaningless latitude and longitude. But at least it shows something other than type=0,
