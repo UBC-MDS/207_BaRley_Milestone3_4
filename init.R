@@ -53,6 +53,3 @@ remotes::install_github("plotly/dash-table", ref="042ad65")
 remotes::install_github("plotly/dash-html-components", ref="17da1f4")
 remotes::install_github("plotly/dash-core-components", ref="cc1e654")
 remotes::install_github("plotly/dashR", ref="dev", dependencies=FALSE)
-
-# installs tidyverse
-install.packages("https://cran.r-project.org/src/contrib/tidyverse_1.3.0.tar.gz", type="source", repos=NULL)
