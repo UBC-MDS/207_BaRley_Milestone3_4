@@ -1,13 +1,8 @@
 library(dash)
 library(dashCoreComponents)
 library(dashHtmlComponents)
-library(tidyverse)
-library(cowplot)
 library(ggplot2)
-# library(dashTable)
 library(plotly)
-# library(albersusa)
-# library(lattice)
 library(usmap)
 
 source("charts.R")
