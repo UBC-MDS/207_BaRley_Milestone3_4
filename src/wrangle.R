@@ -1,6 +1,9 @@
-# library(tidyverse)
 
-# df <- read_csv("../data/barley.csv")
+library(readr)
+library(tibble)
+library(purrr)
 
-# all_sites <- unique(df$site)
-# all_varieties <- unique(df$variety)
+df <- read_csv("../data/barley.csv")
+
+all_sites <- unique(df$site)
+all_varieties <- unique(df$variety)

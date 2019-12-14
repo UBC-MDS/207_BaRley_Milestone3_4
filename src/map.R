@@ -1,11 +1,10 @@
   library(ggplot2)
-  library(albersusa)
+  library(usmap)
   library(tidyverse)
-  library(lattice)
   
   # Read in the data from the repository
   
-  df <- read_csv("data/barley.csv") %>% 
+  df <- read_csv("../data/barley.csv") %>% 
     select(2:ncol(.))
   
   # Defines the sites by actual latitude and longitude
