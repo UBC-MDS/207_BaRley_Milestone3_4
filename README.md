@@ -16,7 +16,9 @@ The points on the map represent the position of the different sites. If you go d
 
 #### App layout  
 
-<img src="./img/App_layout.png" alt="App Layout" style="float: left; margin-right: 10px;" />
+<img src="./img/App_live_screenshot.png" alt="App Screenshot" style="float: left; margin-right: 10px;" />
+
+
 
 
 
