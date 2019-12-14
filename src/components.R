@@ -33,3 +33,4 @@ varietyDropdown <- dccDropdown(
   value = levels(as.factor(df$variety)), #Selects all by default
   multi = TRUE
 )
+
