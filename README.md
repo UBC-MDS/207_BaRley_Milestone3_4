@@ -12,7 +12,7 @@ Users will find the app helpful to compare the yield across multiple sites in Mi
  #### App Usage
 
 Select the sites, the varieties and the year(s) on which you want to have some information. The app will automatically update.
-The points on the map represent the position of the different sites. If you go down on the page, you'll see the 3 graphs described above. Each graph is interactive: you can zoom out on it to see the values more precisely. If you put your mouse over one bar of a graph, you'll see the site, the variety, the year and the yield corresponding to this bar. For the heat map, the behavior is similar when you mouse over a tile instead of a bar.
+The points on the map represent the position of the different sites. If you go down on the page, you'll see the 3 graphs described above. Each graph is interactive: you can zoom out on it to see the values more precisely. If you put your mouse over one bar of a graph, you'll see the site, the variety, the year and the yield corresponding to this bar. For the heat map, the behavior is similar when you mouse over a tile instead of a bar. 
 
 #### App layout  
 

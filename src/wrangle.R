@@ -1,4 +1,6 @@
-library(tidyverse)
+    library(readr)
+    library(tibble)
+    library(purrr)
 
 df <- read_csv("../data/barley.csv")
 
