@@ -13,8 +13,8 @@ library(usmap)
 library(readr)
 library(purrr)
 library(tibble)
-df <- read_csv("barley.csv")
-
+#df <- read_csv("barley.csv")
+df <- readr::read_csv("https://github.com/vanandsh/207_BaRley_Milestone3_4/blob/master/barley.csv?raw=true")
 all_sites <- unique(df$site)
 all_varieties <- unique(df$variety)
 
@@ -400,5 +400,5 @@ app$callback(
     make_map(site_value)
   })
 
-#app$run_server()
-app$run_server(host = "0.0.0.0", port = Sys.getenv('PORT', 8050))
+app$run_server()
+#app$run_server(host = "0.0.0.0", port = Sys.getenv('PORT', 8050))
