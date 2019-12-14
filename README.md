@@ -1,6 +1,10 @@
 # DSCI_532_L02_group207_dashboards
 Public Repository for Group 207
 
+Note: We were unable to deploy to Heroku due to a known bug in plotly regarding rgdal. Please see this post here on the [MDS Slack Channel](https://ubc-mds.slack.com/archives/C24J4AW3Z/p1576255148006900?thread_ts=1576188029.304900&cid=C24J4AW3Z) regarding this issue. <br>
+
+Please see this link [here](https://github.com/UBC-MDS/207_BaRley_Milestone3_4/blob/master/REFLECTIONS.md) for our reflections.
+
 #### App Description 
 
 The app contains a landing page that displays the annual yield of barley for a range of varieties and sites in Minnesota for the years 1931 and 1932.  The user has an option to filter out variables from the annual yield distribution display, by the varieties of barley, by the sites, and finally by the year. There is also a map that will highlight the selected sites in Minnesota for which the yield is displayed. The first two graphs are comparing the yield vs variety and site, respectively. The third graph is a heatmap that makes it easy to see what sites have the highest yield for each variety. <Br>
